@@ -1,29 +1,11 @@
-@keyframes typing {
-	from {
-		width: 2ch
-	}
-
-	to {
-		width: 30%
-	}
+* {
+	transition: all ls;
 }
-
-@keyframes blink-caret {
-
-	from,
-	to {
-		border-color: transparent
-	}
-
-	50% {
-		border-color: green;
-	}
-}
-
 
 body {
-	font-family: 'Courier New', monospace;
-	background: black;
+	font-family: monospace;
+	background: rgb(30, 50, 50);
+	perspective: 1000px;
 }
 
 #user-name {
@@ -37,17 +19,14 @@ body {
 }
 
 .terminal {
-	overflow: hidden;
 	white-space: nowrap;
-	border-right-color: green;
 	letter-spacing: .05em;
 	padding-left: 3%;
 	padding-top: 1%;
 	padding-bottom: 1%;
 	font-size: 1rem;
 	font-weight: 600;
-	display: block;
-	color: rgb(160, 250, 160);
+	color: rgb(120, 210, 120);
 }
 
 .cd-select {
@@ -60,4 +39,22 @@ body {
 
 a:hover {
 	color: rgb(150, 250, 150);
+}
+
+
+.terminal-win {
+	display: block;
+	overflow: auto;
+	background: rgb(48, 48, 48);
+	border: 1px solid #ccc;
+	max-height: 70vh;
+	width: 60vw;
+	height: 140vh;
+	font-size: 14px;
+	font-family: monospace;
+	padding: 0.5vh 0.25vw;
+	box-shadow: -8px 8px 4px 0 rgba(0, 0, 0, 0.3);
+	white-space: pre-wrap;
+	outline: 0;
+	margin: 10vh 5%;
 }
