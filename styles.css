@@ -47,12 +47,12 @@ body {
 	font-size: 1rem;
 	font-weight: 600;
 	display: block;
-	color: rgb(50, 160, 50);
+	color: rgb(160, 250, 160);
 }
 
 .cd-select {
 	display: flex;
-	color: rgb(70, 170, 70);
+	color: rgb(170, 170, 170);
 	padding-left: 12%;
 	padding-top: 3vh;
 
