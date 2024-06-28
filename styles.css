@@ -21,9 +21,7 @@ body {
 .terminal {
 	white-space: nowrap;
 	letter-spacing: .05em;
-	padding-left: 3%;
-	padding-top: 1%;
-	padding-bottom: 1%;
+	padding-left: 1vw;
 	font-size: 1rem;
 	font-weight: 600;
 	color: rgb(120, 210, 120);
@@ -47,9 +45,6 @@ a:hover {
 	overflow: auto;
 	background: rgb(48, 48, 48);
 	border: 1px solid #ccc;
-	max-height: 70vh;
-	width: 60vw;
-	height: 140vh;
 	font-size: 14px;
 	font-family: monospace;
 	padding: 0.5vh 0.25vw;
@@ -57,4 +52,29 @@ a:hover {
 	white-space: pre-wrap;
 	outline: 0;
 	margin: 10vh 5%;
+}
+
+@media only screen and (min-width: 768px) {
+	.terminal-win {
+		margin: 10vh 5%;
+		width: 65vw;
+		height: 80vh;
+		max-height: 90vh;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.terminal-win {
+		margin: unset;
+		width: 98%;
+		height: 80vh;
+		max-height: 80vh;
+	}
+}
+
+#home-button {
+	position: -webkit-sticky;
+	position: sticky;
+	bottom: 10px;
+	margin: 10% auto;
 }

@@ -12,8 +12,8 @@ var textToWrite = new Array(
 ""
 );
  
-var writeDelay = 25;
-var newLineDelay = 150;
+var writeDelay = 15;
+var newLineDelay = 60;
 var scrollAt = 20;
 var currIndex = 0;
 var endIndex;
@@ -42,7 +42,7 @@ function typewriter()
 		}
 	} else {
 		if (textToWrite[currIndex][currTextPos] == '<' || currIndex >= 4) { writeDelay = 0; newLineDelay = 10 }
-		if (textToWrite[currIndex][currTextPos] == '>') { writeDelay = 25; newLineDelay= 150 }
+		if (textToWrite[currIndex][currTextPos] == '>') { writeDelay = 15; newLineDelay= 60 }
 		setTimeout("typewriter()", writeDelay);
 	}
 	cdListeners();
