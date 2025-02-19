@@ -2,7 +2,7 @@
 var textToWrite = new Array(
 "<div class='terminal'>> Loading demo projects...</div>",
 "<div class='terminal' id='cd'>> cd </div>",
-'<a href="./neural-network/index.html" class="cd-select" id="neural-net">.\\neural-network\\</a>',
+'<a href="https://beesybumblebee.github.io/DigitReaderNeuralNetwork/" class="cd-select" id="neural-net">.\\neural-network\\</a>',
 '<a href="../index.html" class="cd-select" id="home-button">..\\</a>',
 ""
 );
