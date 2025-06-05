@@ -13,7 +13,7 @@ const textToWrite = new Array(
 );
 
 const writeDelay = 5;
-const newLineDelay = 60;
+const newLineDelay = 10;
 let inTag = true;
 let scrollAt = 20;
 let currIndex = 0;
