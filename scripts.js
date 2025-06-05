@@ -7,7 +7,7 @@ var textToWrite = new Array(
 "<div class='terminal' id='cd'>> cd </div>",
 '<a href="https://github.com/BeesyBumbleBee" class="cd-select" id="github"> .\\github\\</a>',
 '<a href="https://www.linkedin.com/in/szymon-oleskiewicz/" class="cd-select" id="linkedin">.\\linkedin\\</a>',
-'<a href="#" class="cd-select" id="cv" download="CV">.\\CV</a>',
+'<a href="#" class="cd-select" id="cv" download="CV">.\\CV\\</a>',
 '<a href="./projects/index.html" class="cd-select" id="projects">.\\projects-demo\\</a>',
 ""
 );
