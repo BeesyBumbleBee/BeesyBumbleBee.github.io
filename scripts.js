@@ -7,19 +7,14 @@ const textToWrite = new Array(
 "<div class='terminal' id='cd'>> cd </div>",
 '<a href="https://github.com/BeesyBumbleBee" class="cd-select" id="github"> .\\github\\</a>',
 '<a href="https://www.linkedin.com/in/szymon-oleskiewicz/" class="cd-select" id="linkedin">.\\linkedin\\</a>',
-'<a href="#" class="cd-select" id="cv" download="CV">.\\CV\\</a>',
+'<a href="./CV.pdf" class="cd-select" id="cv" download="CV">.\\CV\\</a>',
 '<a href="./projects/index.html" class="cd-select" id="projects">.\\projects-demo\\</a>',
 ""
 );
 
-const TEXT_WRITEDELAY = 8;
-const TEXT_NEWLINEDELAY = 30;
-const CODE_WRITEDELAY = 1;
-const CODE_NEWLINEDELAY = 5;
-
-
-let writeDelay = TEXT_WRITEDELAY;
-let newLineDelay = TEXT_NEWLINEDELAY;
+const writeDelay = 5;
+const newLineDelay = 60;
+let inTag = true;
 let scrollAt = 20;
 let currIndex = 0;
 let endIndex;
@@ -47,9 +42,10 @@ function typewriter()
 			setTimeout("typewriter()", newLineDelay);
 		}
 	} else {
-		if (textToWrite[currIndex][currTextPos] == '<' || currIndex >= 4) { writeDelay = CODE_WRITEDELAY; newLineDelay = CODE_NEWLINEDELAY }
-		if (textToWrite[currIndex][currTextPos] == '>') { writeDelay = TEXT_WRITEDELAY; newLineDelay= TEXT_NEWLINEDELAY }
-		setTimeout("typewriter()", writeDelay);
+		if (textToWrite[currIndex][currTextPos] == '<') { inTag = true; } 
+		if (textToWrite[currIndex][currTextPos] == '>') { inTag = false; }
+		if (inTag == true) { typewriter(); }
+		else { setTimeout("typewriter()", writeDelay); }
 	}
 	cdListeners();
 }
