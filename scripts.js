@@ -1,5 +1,5 @@
 // set up text to print, each item in array is new line
-let textToWrite = new Array(
+const textToWrite = new Array(
 "<div class='terminal'>> Loading user info...</div>",
 "<div class='terminal' id='user'>Name: Szymon Oleśkiewicz</div>",
 "<div class='terminal' id='user'>Profession: Software Engineer (in making) </div>",
