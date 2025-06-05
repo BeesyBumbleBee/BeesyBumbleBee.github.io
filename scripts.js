@@ -11,22 +11,28 @@ var textToWrite = new Array(
 '<a href="./projects/index.html" class="cd-select" id="projects">.\\projects-demo\\</a>',
 ""
 );
- 
-var writeDelay = 15;
-var newLineDelay = 60;
-var scrollAt = 20;
-var currIndex = 0;
-var endIndex;
 
-var currTextPos = 0;
-var contents = ' ';
-var currRow;
+const TEXT_WRITEDELAY = 8;
+const TEXT_NEWLINEDELAY = 30;
+const CODE_WRITEDELAY = 1;
+const CODE_NEWLINEDELAY = 5;
+
+
+let writeDelay = TEXT_WRITEDELAY;
+let newLineDelay = TEXT_NEWLINEDELAY;
+let scrollAt = 20;
+let currIndex = 0;
+let endIndex;
+
+let currTextPos = 0;
+let contents = ' ';
+let currRow;
 
 function typewriter()
 {
 	contents =  ' ';
 	currRow = Math.max(0, currIndex - scrollAt);
-	var destination = document.getElementById("typedtext");
+	let destination = document.getElementById("typedtext");
 	if ( endIndex === undefined ) { endIndex = textToWrite.length }
 
 	while ( currRow < currIndex ) {
@@ -41,8 +47,8 @@ function typewriter()
 			setTimeout("typewriter()", newLineDelay);
 		}
 	} else {
-		if (textToWrite[currIndex][currTextPos] == '<' || currIndex >= 4) { writeDelay = 0; newLineDelay = 10 }
-		if (textToWrite[currIndex][currTextPos] == '>') { writeDelay = 15; newLineDelay= 60 }
+		if (textToWrite[currIndex][currTextPos] == '<' || currIndex >= 4) { writeDelay = CODE_WRITEDELAY; newLineDelay = CODE_NEWLINEDELAY }
+		if (textToWrite[currIndex][currTextPos] == '>') { writeDelay = TEXT_WRITEDELAY; newLineDelay= TEXT_NEWLINEDELAY }
 		setTimeout("typewriter()", writeDelay);
 	}
 	cdListeners();
